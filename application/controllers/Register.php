@@ -3,7 +3,7 @@
 /**
  *
  */
-class Home extends CI_Controller{
+class Register extends CI_Controller{
 
   function __construct(){
       parent::__construct();
@@ -13,12 +13,14 @@ class Home extends CI_Controller{
     $data['header'] = 'common/header';
     $data['footer'] = 'common/footer';
     $data['sidebar'] = 'common/sidebar';
-    $data['home_baner'] = 'Home_baner';
-    $this->load->view('Home_view',$data);
+    $this->load->view('Register_view',$data);
+  }
+
+  public function signup(){
+    $data = $this->input->post();
+    var_dump($data);
   }
 }
 
 
-
-
- ?>
+?>
